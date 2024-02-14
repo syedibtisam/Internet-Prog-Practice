@@ -19,26 +19,14 @@
     margin: 10px;
 }
 p {
-    display: inline;
-}
-.floating p {
-    display: block;
-    float: left;
-    background-color: #666;
-    color: black;
     margin: 10px;
-    padding: 20px;
-    width: 100px;
 }
-.container p {
-    width: 100px;
-    display: block;
-    color: black;
-    background-color: aqua;
-    float: left;
-}
-.container {
-    background-color: red;
-    display: block;
-    overflow: auto;
+
+
+.box {
+    font-size: 2rem;
+    background-color: pink;
+    /* Box Model */
+    width: 300px;
+    height: 100px;
 }
