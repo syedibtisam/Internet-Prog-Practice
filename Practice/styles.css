@@ -22,11 +22,21 @@ p {
     margin: 10px;
 }
 
-
+/* Box Model learning */
 .box {
     font-size: 2rem;
-    background-color: pink;
+    background-color: green;
     /* Box Model */
-    width: 300px;
-    height: 100px;
+    width: 200px;
+    height: 50px;
+
+    /* padding: 10px; */
+    padding: 0.5em;
+    border: 20px solid black;
+    margin: 20px;
+    /* does not includes in the element so it only makes 
+    the exact differecen as specified which 20, 
+    it wont be 40 for each element */
+
+
 }
