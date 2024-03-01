@@ -1,27 +1,42 @@
-function updateHeadingContent(){
+// paragraph Functions
+function addMouseEnterEventonParagraph() {
+    var paragraphId = document.getElementById("paragraphId");
+    paragraphId.addEventListener("mouseenter",updateParagraphContentOnEnter);
+}
+function addMouseLeaveEventonParagraph() {
+    var paragraphId = document.getElementById("paragraphId");
+    paragraphId.addEventListener("mouseleave",updateParagraphContentOnLeave);
+}
+function updateParagraphContentOnEnter(){
+    var paragraphId = document.getElementById("paragraphId");
+    paragraphId.firstChild.nodeValue = "New Value of Paragraph";
+}
+function updateParagraphContentOnLeave(){
+    var paragraphId = document.getElementById("paragraphId");
+    paragraphId.firstChild.nodeValue = "Initial Value of Paragraph";
+}
+
+// Heading Functions
+function addMouseEnterEventonHeading() {
+    var headingId = document.getElementById("headingId");
+    headingId.addEventListener("mouseenter",updateHeadingContentOnEnter);
+}
+function addMouseLeaveEventonHeading() {
+    var headingId = document.getElementById("headingId");
+    headingId.addEventListener("mouseleave",updateHeadingContentOnLeave);
+}
+function updateHeadingContentOnEnter(){
     var headingId = document.getElementById("headingId");
     headingId.firstChild.nodeValue = "New Value of Heading";
 }
-function addButtonOnHeading(){
+function updateHeadingContentOnLeave(){
     var headingId = document.getElementById("headingId");
-    headingId.addEventListener("click",updateHeadingContent);
-}
-function updateParagraphContent(){
-    var paragraphId = document.getElementById("paragraphId");
-    paragraphId.firstChild.nodeValue = "New Value of paragraph";
-}
-function addButtonOnParagraph(){
-    var paragraphId = document.getElementById("paragraphId");
-    paragraphId.addEventListener("click",updateParagraphContent);
-}
-
-function addMoverEnterEventonParagraph() {
-    var headingId = document.getElementById("headingId");
-    headingId.addEventListener("onmouseover",updateHeadingContent);
-
+    headingId.firstChild.nodeValue = "Initial Value of Heading";
 }
 function updateHTMLUsingJS(){
-    addButtonOnHeading();
-    addButtonOnParagraph();
+    addMouseEnterEventonHeading();
+    addMouseLeaveEventonHeading();
+    addMouseEnterEventonParagraph();
+    addMouseLeaveEventonParagraph();
 }
 document.addEventListener("DOMContentLoaded",updateHTMLUsingJS);
