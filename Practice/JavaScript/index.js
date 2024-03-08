@@ -1,7 +1,9 @@
-function test(){
-    console.log("test");
+function keyDetails(event) {
+    console.log(event);
 }
 function main() {
-    setInterval(test,1000);
+    let pid = document.getElementById("p");
+    document.addEventListener("keydown",keyDetails);
+    pid.addEventListener("click",keyDetails);
 }
 document.addEventListener("DOMContentLoaded",main);
